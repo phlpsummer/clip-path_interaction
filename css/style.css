@@ -14,7 +14,8 @@ a {
   width: 100%;
   height: 100vh;
   background: #111;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   #visual main {
     width: 100%;
     height: 100%; }
@@ -27,33 +28,60 @@ a {
         position: absolute;
         top: 0;
         left: 0;
-        overflow: hidden; }
+        overflow: hidden;
+        opacity: 0; }
         #visual main .bg li img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           object-position: center center;
           filter: brightness(0.3) blur(5px);
-          transform: scale(1.4);
+          transform: scale(1.2);
           transform-origin: center; }
+        #visual main .bg li:nth-of-type(2) {
+          opacity: 1; }
     #visual main .mainImg {
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      z-index: 1; }
       #visual main .mainImg li {
-        display: none;
         width: 100%;
         height: 100%;
         position: absolute;
         left: 0;
         top: 0;
         overflow: hidden;
-        clip-path: circle(32.9vw at 50% 50.3%); }
+        transition: 1s;
+        clip-path: circle(0vw at 50% 50.3%); }
         #visual main .mainImg li img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           object-position: center center; }
-        #visual main .mainImg li.on {
+    #visual main .smallMain {
+      z-index: 1; }
+      #visual main .smallMain li.on {
+        clip-path: circle(14vw at 50% 50.3%); }
+    #visual main .largeMain li.on {
+      clip-path: circle(32.9vw at 50% 50.3%); }
+    #visual main .title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -8vw;
+      margin-top: -3vw;
+      z-index: 3; }
+      #visual main .title li {
+        display: none;
+        width: 25vw;
+        height: 20vw;
+        position: absolute;
+        left: 0;
+        top: 0; }
+        #visual main .title li span {
+          font: 800 2.2vw/1.5 'Montserrat';
+          color: #fff; }
+        #visual main .title li.on {
           display: block; }
     #visual main .line {
       border-radius: 50%;
@@ -78,5 +106,26 @@ a {
       height: 66vw;
       margin-left: -33vw;
       margin-top: -33vw; }
+    #visual main .btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      margin-top: -20px;
+      z-index: 2; }
+      #visual main .btn i {
+        font-size: 12px; }
+    #visual main .btnPrev {
+      left: 17%;
+      margin-left: -20px; }
+    #visual main .btnNext {
+      right: 17%;
+      margin-right: -20px; }
 
 /*# sourceMappingURL=style.css.map */
