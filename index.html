@@ -9,8 +9,68 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script defer src="js/main.js"></script>
+    <script defer src="js/common.js"></script>
 </head>
 <body>
+    <header id="header">
+        <div class="inner">
+            <h1 class="logo"><a href="index.html">D-RECORD</a></h1>
+            <ul id="gnb">
+                <li>
+                    <a href="about.html">ABOUT</a>
+                    <ul class="subMenu">
+                        <li><a href="about.html">VISION</a></li>
+                        <li><a href="about.html">VALUE</a></li>
+                        <li><a href="about.html">DEPARTMENT</a></li>
+                    </ul>
+                </li>
+                <li><a href="youtube.html">YOUTUBE</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li>
+                    <a href="community.html">COMMUNITY</a>
+                    <ul class="subMenu">
+                        <li><a href="community.html">FAQ</a></li>
+                        <li><a href="community.html">NEWS</a></li>
+                    </ul>
+                </li>
+                <li><a href="location.html">LOCATION</a></li>
+            </ul>
+            <ul id="util">
+                <li><a href="#">LOGIN</a></li>
+                <li><i class="fas fa-long-arrow-alt-left"></i></li>
+                <li><a href="join.html">JOIN</a></li>
+            </ul>
+        </div>
+        <!--모바일 헤더 메뉴-->
+        <a href="#" class="btn_menu_mo"><span>전체 메뉴 버튼</span></a>
+        <ul id="gnb_mo">
+            <li>
+                <a href="about.html">ABOUT</a><span class="plus">서브메뉴</span>
+                <ul class="sub_mo">
+                    <li><a href="about.html">VISION</a></li>
+                    <li><a href="about.html">VALUE</a></li>
+                    <li><a href="about.html">DEPARTMENT</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="youtube.html">YOUTUBE</a>
+            </li>
+            <li>
+                <a href="gallery.html">GALLERY</a>
+            </li>
+            <li>
+                <a href="community.html">COMMUNITY</a><span class="plus">서브메뉴</span>
+                <ul class="sub_mo">
+                    <li><a href="community.html">FAQ</a></li>
+                    <li><a href="community.html">NEWS</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="location.html">LOCATION</a>
+            </li>
+        </ul>
+    </header>
+
     <figure id="visual">
         <main>
             <ul class="bg">
@@ -33,11 +93,11 @@
 
             
             <ul class="title">
-                <li class="on">
-                    <span>MUSIC IS MY<br>LIFE</span>
-                </li>
                 <li>
                     <span>THE ONLY TRUTH<br>IS MUSIC</span>
+                </li>
+                <li class="on">
+                    <span>MUSIC IS MY<br>LIFE</span>
                 </li>
                 <li>
                     <span>MUSIC IS<br>LIFE ITSELF</span>

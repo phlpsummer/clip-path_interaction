@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Montserrat:wght@300;500;600;800&display=swap");
 * {
   margin: 0;
@@ -9,6 +10,250 @@ ul, ol, li {
 
 a {
   text-decoration: none; }
+
+/* header ---------------------------------------------------------------------------------- */
+#header {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  z-index: 4;
+  /* header hover ========== */
+  /* 모바일 버전 헤더 ========== */ }
+  #header .inner {
+    width: 1180px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative; }
+    #header .inner .logo {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -24px;
+      z-index: 10; }
+      #header .inner .logo a {
+        font: normal 28px/1 'Bangers';
+        color: #fff;
+        letter-spacing: 1px; }
+    #header .inner #gnb {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center; }
+      #header .inner #gnb > li {
+        display: inline-block;
+        margin: 0 5px;
+        position: relative;
+        height: 80px; }
+        #header .inner #gnb > li > a {
+          display: block;
+          padding: 0px 15px;
+          font: 700 14px/80px 'Noto Sans KR';
+          color: #fff; }
+        #header .inner #gnb > li .subMenu {
+          width: 1180px;
+          height: 46px;
+          background: #111;
+          position: absolute;
+          top: 80px;
+          left: 15px;
+          display: none;
+          opacity: 0; }
+          #header .inner #gnb > li .subMenu li {
+            float: left;
+            margin-right: 40px; }
+            #header .inner #gnb > li .subMenu li a {
+              display: block;
+              width: 100%;
+              height: 100%;
+              font: 300 12px/46px 'Noto Sans KR';
+              color: #fff;
+              letter-spacing: 1px;
+              position: relative; }
+              #header .inner #gnb > li .subMenu li a::after {
+                content: '';
+                display: block;
+                width: 110%;
+                height: 1px;
+                background: rgba(255, 255, 255, 0.9);
+                position: absolute;
+                top: 52%;
+                left: -5%;
+                opacity: 0; }
+              #header .inner #gnb > li .subMenu li a:hover::after {
+                opacity: 1; }
+          #header .inner #gnb > li .subMenu::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            position: absolute;
+            top: 0;
+            left: -100%; }
+          #header .inner #gnb > li .subMenu::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            position: absolute;
+            top: 0;
+            left: 100%; }
+    #header .inner #util {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%); }
+      #header .inner #util li {
+        display: inline-block;
+        margin-left: 10px; }
+        #header .inner #util li a {
+          display: block;
+          font: 700 13px/1 'Noto Sans KR';
+          color: #fff; }
+        #header .inner #util li:nth-of-type(2) {
+          font-size: 13px;
+          color: #fff; }
+        #header .inner #util li:nth-of-type(1) a {
+          color: #bbb; }
+  #header:hover {
+    background: #111;
+    border-bottom: 1px solid #888; }
+    #header:hover .inner #gnb > li:hover::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      bottom: 0px;
+      left: 0; }
+  #header .btn_menu_mo {
+    display: none;
+    opacity: 0;
+    width: 30px;
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    z-index: 10; }
+    #header .btn_menu_mo span {
+      width: 70%;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-bottom: -1px;
+      text-indent: -9999px;
+      background: #fff;
+      opacity: 1;
+      transition: 0.5s; }
+    #header .btn_menu_mo::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #fff;
+      transition: 0.5s 0.3s;
+      transform-origin: left center; }
+    #header .btn_menu_mo::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #fff;
+      transition: 0.5s 0.3s;
+      transform-origin: left center; }
+    #header .btn_menu_mo:hover span {
+      width: 100%; }
+    #header .btn_menu_mo.on span {
+      left: -100%;
+      opacity: 0; }
+    #header .btn_menu_mo.on::before {
+      transform: rotate(45deg); }
+    #header .btn_menu_mo.on::after {
+      transform: rotate(-45deg); }
+  #header #gnb_mo {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 130px 30px 0;
+    background: #111111;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 9; }
+    #header #gnb_mo > li {
+      width: 100%;
+      position: relative; }
+      #header #gnb_mo > li > a {
+        display: inline-block;
+        width: 90%;
+        padding: 22px 0;
+        font: 700 36px/1 'Noto Sans KR';
+        color: #fff;
+        letter-spacing: 1px;
+        position: relative; }
+      #header #gnb_mo > li .plus {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        position: absolute;
+        top: 40px;
+        right: 5px;
+        transform: translateY(-50%);
+        text-indent: -9999px;
+        transition: 0.5s;
+        cursor: pointer; }
+        #header #gnb_mo > li .plus::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #fff;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -1px;
+          transform: rotate(90deg);
+          transition: 0.5s; }
+        #header #gnb_mo > li .plus::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #fff;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -1px; }
+        #header #gnb_mo > li .plus.on::before {
+          transform: rotate(0deg); }
+      #header #gnb_mo > li .sub_mo {
+        display: none;
+        margin-bottom: 20px; }
+        #header #gnb_mo > li .sub_mo > li > a {
+          width: 100%;
+          display: block;
+          padding: 18px 30px;
+          font: 500 16px/1 'Noto Sans KR';
+          color: #fff; }
+    #header #gnb_mo.on {
+      top: 0;
+      opacity: 1; }
 
 #visual {
   width: 100%;
@@ -57,7 +302,12 @@ a {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          object-position: center center; }
+          object-position: center center;
+          transform: scale(1);
+          transition: 0.5s 0.5s; }
+        #visual main .mainImg li.on img {
+          transform: scale(1.1);
+          transition: 1s 1s; }
     #visual main .smallMain {
       z-index: 1; }
       #visual main .smallMain li.on {
@@ -68,21 +318,30 @@ a {
       position: absolute;
       top: 50%;
       left: 50%;
-      margin-left: -8vw;
-      margin-top: -3vw;
+      margin-left: -200px;
+      margin-top: -60px;
       z-index: 3; }
       #visual main .title li {
-        display: none;
-        width: 25vw;
-        height: 20vw;
+        width: 400px;
+        height: 120px;
         position: absolute;
         left: 0;
-        top: 0; }
+        top: 0;
+        display: flex;
+        justify-content: center;
+        overflow: hidden; }
         #visual main .title li span {
-          font: 800 2.2vw/1.5 'Montserrat';
-          color: #fff; }
-        #visual main .title li.on {
-          display: block; }
+          font: 800 2vw/1.5 'Montserrat';
+          color: #fff;
+          opacity: 0;
+          transform: translateY(100%);
+          transition: 1s; }
+        #visual main .title li.on span {
+          transform: translateY(0%);
+          opacity: 1; }
+        #visual main .title li.upper span {
+          transform: translateY(-100%);
+          opacity: 0; }
     #visual main .line {
       border-radius: 50%;
       position: absolute;
