@@ -9,11 +9,15 @@ const lMain_ul = frame.querySelector(".largeMain");
 const lMainImgs = lMain_ul.querySelectorAll("li");
 const title_ul = frame.querySelector(".txt");
 const titles = title_ul.querySelectorAll("ul");
+let enableClick = true;
 let i = 1;
 
 btnNext.addEventListener("click",(e)=>{
     e.preventDefault();
 
+    if(!enableClick) {return;}
+
+    enableClick = false;
     (i > 1 ? i=0 : i++);
 
     //title
@@ -53,6 +57,9 @@ btnNext.addEventListener("click",(e)=>{
             prop: "opacity",
             value: 1,
             duration: 500,
+            callback: ()=>{
+                enableClick = true;
+            }
         });
     }, 1500);
 });
