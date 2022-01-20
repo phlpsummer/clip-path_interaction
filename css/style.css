@@ -318,30 +318,27 @@ a {
       position: absolute;
       top: 50%;
       left: 50%;
-      margin-left: -200px;
-      margin-top: -60px;
+      transform: translate(-50%, -30%);
       z-index: 3; }
       #visual main .title li {
-        width: 400px;
-        height: 120px;
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: flex;
-        justify-content: center;
-        overflow: hidden; }
+        width: 100%;
+        height: 60px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        position: relative; }
         #visual main .title li span {
-          font: 800 2vw/1.5 'Montserrat';
+          font: 800 44px/1 'Montserrat';
           color: #fff;
           opacity: 0;
-          transform: translateY(100%);
+          position: relative;
+          top: 100%;
           transition: 1s; }
-        #visual main .title li.on span {
-          transform: translateY(0%);
-          opacity: 1; }
-        #visual main .title li.upper span {
-          transform: translateY(-100%);
-          opacity: 0; }
+      #visual main .title.on li span {
+        top: 0%;
+        opacity: 1; }
+      #visual main .title.upper li span {
+        top: -100%;
+        opacity: 0; }
     #visual main .line {
       border-radius: 50%;
       position: absolute;
