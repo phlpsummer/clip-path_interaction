@@ -280,7 +280,7 @@ a {
           height: 100%;
           object-fit: cover;
           object-position: center center;
-          filter: brightness(0.3) blur(5px);
+          filter: brightness(0.4) blur(5px);
           transform: scale(1.2);
           transform-origin: center; }
         #visual main .bg li:nth-of-type(2) {
@@ -310,8 +310,10 @@ a {
           transition: 1s 1s; }
     #visual main .smallMain {
       z-index: 1; }
-      #visual main .smallMain li.on {
-        clip-path: circle(14vw at 50% 50.3%); }
+      #visual main .smallMain li {
+        transition: 0.5s; }
+        #visual main .smallMain li.on {
+          clip-path: circle(14vw at 50% 50.3%); }
     #visual main .largeMain li.on {
       clip-path: circle(32.9vw at 50% 50.3%); }
     #visual main .title {

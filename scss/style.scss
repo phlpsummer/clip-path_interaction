@@ -281,7 +281,7 @@
                 img {
                     width: 100%; height: 100%;
                     object-fit: cover; object-position: center center;
-                    filter: brightness(0.3) blur(5px);
+                    filter: brightness(0.4) blur(5px);
                     transform: scale(1.2); transform-origin: center;
                 }
 
@@ -314,7 +314,10 @@
         }
         .smallMain {
             z-index: 1;
-            li.on { clip-path: circle(14vw at 50% 50.3%);}
+            li {
+                transition: 0.5s;
+                &.on {clip-path: circle(14vw at 50% 50.3%);}
+            }
         }
         .largeMain {
             li.on { clip-path: circle(32.9vw at 50% 50.3%);}
