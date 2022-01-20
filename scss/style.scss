@@ -271,6 +271,7 @@
 
         .bg {
             width: 100%; height: 100%;
+            overflow: hidden;
 
             li {
                 width: 100%; height: 100%;
@@ -278,14 +279,25 @@
                 top: 0; left: 0;
                 overflow: hidden;
                 opacity: 0;
-                img {
-                    width: 100%; height: 100%;
-                    object-fit: cover; object-position: center center;
-                    filter: brightness(0.4) blur(5px);
-                    transform: scale(1.2); transform-origin: center;
-                }
+                transform: scale(1.2); transform-origin: center;
+                filter: brightness(0.4) blur(5px);
+                // img {
+                //     width: 100%; height: 100%;
+                //     object-fit: cover; object-position: center center;
+                //     filter: brightness(0.4) blur(5px);
+                //     transform: scale(1.2); transform-origin: center;
+                // }
 
-                &:nth-of-type(2) { opacity: 1;}
+                &:nth-of-type(1) {
+                    background: url('../img/visual1.jpg') no-repeat center/cover;
+                }
+                &:nth-of-type(2) {
+                    opacity: 1;
+                    background: url('../img/visual2.jpg') no-repeat center/cover;
+                }
+                &:nth-of-type(3) {
+                    background: url('../img/visual3.jpg') no-repeat center/cover;
+                }
             }
         }
 
@@ -300,8 +312,6 @@
                 overflow: hidden;
                 transition: 1s;
                 clip-path: circle(0vw at 50% 50.3%);
-                // clip-path: circle(14vw at 50% 50.3%);
-                // clip-path: circle(32.9vw at 50% 50.3%);
 
                 img {
                     width: 100%; height: 100%;

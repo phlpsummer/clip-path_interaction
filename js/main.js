@@ -9,13 +9,22 @@ const lMain_ul = frame.querySelector(".largeMain");
 const lMainImgs = lMain_ul.querySelectorAll("li");
 const title_ul = frame.querySelector(".txt");
 const titles = title_ul.querySelectorAll("ul");
+const $lImgs = $("#visual .largeMain li.on");
+
 let enableClick = true;
 let i = 1;
+
+$(document).ready(function(){
+    $lImgs.ripples({
+        resolution: 200,
+        perturbance: .004,
+    }); 
+})
 
 btnNext.addEventListener("click",(e)=>{
     e.preventDefault();
 
-    if(!enableClick) {return;}
+    if(!enableClick) return;
 
     enableClick = false;
     (i > 1 ? i=0 : i++);
@@ -63,3 +72,4 @@ btnNext.addEventListener("click",(e)=>{
         });
     }, 1500);
 });
+
