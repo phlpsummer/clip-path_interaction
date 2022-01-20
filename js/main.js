@@ -7,18 +7,14 @@ const sMain_ul = frame.querySelector(".smallMain");
 const sMainImgs = sMain_ul.querySelectorAll("li");
 const lMain_ul = frame.querySelector(".largeMain");
 const lMainImgs = lMain_ul.querySelectorAll("li");
+const hMain_ul = frame.querySelector(".mainHall");
+const hMainImgs = hMain_ul.querySelectorAll("li");
 const title_ul = frame.querySelector(".txt");
 const titles = title_ul.querySelectorAll("ul");
 
 let enableClick = true;
 let i = 1;
 
-$(document).ready(function(){
-    $(".bg li").ripples({
-        resolution: 1000,
-        perturbance: .04,
-    }); 
-})
 
 btnNext.addEventListener("click",(e)=>{
     e.preventDefault();
@@ -42,15 +38,17 @@ btnNext.addEventListener("click",(e)=>{
 
     //main img
     lMain_ul.querySelector(".on").classList.remove("on");
+    hMain_ul.querySelector(".on").classList.remove("on");
     setTimeout(()=>{
         sMain_ul.querySelector(".on").classList.remove("on");
     }, 500);
     setTimeout(()=>{
-        sMainImgs[i].classList.add("on");
+        lMainImgs[i].classList.add("on");
+        hMainImgs[i].classList.add("on");
     }, 1500);
     setTimeout(()=>{
-        lMainImgs[i].classList.add("on");
-    }, 1750);
+        sMainImgs[i].classList.add("on");
+    }, 1800);
 
     //bg
     let j = i - 1;

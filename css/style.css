@@ -288,9 +288,9 @@ a {
           background: url("../img/visual3.jpg") no-repeat center/cover; }
     #visual main .mainImg {
       width: 100%;
-      height: 100%;
-      z-index: 1; }
+      height: 100%; }
       #visual main .mainImg li {
+        z-index: 2;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -309,12 +309,34 @@ a {
         #visual main .mainImg li.on img {
           transform: scale(1.1);
           transition: 1s 1s; }
-    #visual main .smallMain {
-      z-index: 1; }
-      #visual main .smallMain li {
+    #visual main .smallMain li {
+      transition: 0.5s;
+      z-index: 4; }
+      #visual main .smallMain li.on {
+        clip-path: circle(14vw at 50% 50.3%); }
+    #visual main .mainHall {
+      width: 100%;
+      height: 100%; }
+      #visual main .mainHall li {
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        clip-path: circle(14vw at 50% 50.3%);
+        filter: brightness(0.5) blur(5px);
         transition: 0.5s; }
-        #visual main .smallMain li.on {
-          clip-path: circle(14vw at 50% 50.3%); }
+        #visual main .mainHall li img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          transform: scale(1.2);
+          transform-origin: center; }
+        #visual main .mainHall li.on {
+          opacity: 1; }
     #visual main .largeMain li.on {
       clip-path: circle(32.9vw at 50% 50.3%); }
     #visual main .title {
@@ -322,7 +344,7 @@ a {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -30%);
-      z-index: 3; }
+      z-index: 5; }
       #visual main .title li {
         width: 100%;
         height: 60px;
